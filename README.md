@@ -1,2 +1,2 @@
-# vegeta
-Vegeta is a set of Vue2 components for the Bulma CSS framework
+# Vegeta
+Vegeta is a frontend framework based on Vue2 and Bulma CSS framework.
