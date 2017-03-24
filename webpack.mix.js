@@ -11,12 +11,11 @@ let mix = require('laravel-mix');
  |
  */
 
-const path = require('path')
-
 mix.webpackConfig({
-  output: {
-    library: 'Videl'
-  },
+ output: {
+   library: 'Videl',
+   libraryTarget: 'umd',
+ },
 });
 
 mix.js('src/videl.js', 'dist/')
