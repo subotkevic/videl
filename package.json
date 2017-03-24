@@ -1,11 +1,11 @@
 {
-  "name": "vegeta",
+  "name": "videl",
   "version": "0.1.0",
   "description": "Frontend framework for Vue2. Based on Bulma.",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/subotkevic/vegeta.git"
+    "url": "git+https://github.com/subotkevic/videl.git"
   },
   "keywords": [
     "css",
@@ -19,9 +19,9 @@
   "author": "subotkevic",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/subotkevic/vegeta/issues"
+    "url": "https://github.com/subotkevic/videl/issues"
   },
-  "homepage": "https://github.com/subotkevic/vegeta#readme",
+  "homepage": "https://github.com/subotkevic/videl#readme",
   "devDependencies": {
     "bulma": "^0.4.0",
     "laravel-mix": "^0.8.8",

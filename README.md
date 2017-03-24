@@ -1,6 +1,6 @@
-# Vegeta
+# Videl
 
-Vegeta is a component framework for Vue2. Based on Bulma.
+Videl is a component framework for Vue2. Based on Bulma.
 
 ## Quick start
 
