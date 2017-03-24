@@ -46,13 +46,21 @@ We're using CDN for this simple example:
     </head>
 
     <body>
+    
         <!-- App -->
         <div id="vd-app">
-            <!-- Box -->
-            <vd-box>Hello World!</vd-box>
+        
+            <!-- Container -->
+            <vd-container>
             
-            <!-- Button -->
-            <vd-button>This is awesome!</vd-button>
+                <!-- Box -->
+                <vd-box>Hello World!</vd-box>
+                
+                <!-- Button -->
+                <vd-button>This is awesome!</vd-button>
+                
+            </vd-container>
+            
         </div>
 
         <!-- Scripts -->
@@ -60,10 +68,13 @@ We're using CDN for this simple example:
         <script src="https://unpkg.com/videl/dist/videl.js"></script>
         
         <script>
+        
         	new Vue({
         		el: '#vd-app'
         	})
+        	
         </script>
+        
     </body>
 </html>
 ```
