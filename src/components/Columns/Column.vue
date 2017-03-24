@@ -5,8 +5,10 @@
 </template>
 
 <script>
-  let words = ['three-quarters', 'two-thirds', 'half', 'one-third', 'one-quarter'];
-
+  let sizeWords            = ['three-quarters', 'two-thirds', 'half', 'one-third', 'one-quarter'];
+  let sizePrefixes         = ['is', 'is-offset'];
+  let sizeSuffixes         = ['mobile', 'tablet', 'desktop'];
+  let sizeNums             = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
   let wordSizesCamel       = [];
   let wordOffsetSizesCamel = [];
   let wordSizesKebab       = [];
@@ -21,44 +23,46 @@
     'is-narrow-tablet': Boolean,
     'is-narrow-desktop': Boolean,
   };
+  let sizes      = [];
+  let sizesCamel = [];
 
-  for (let word of words) {
-    // Sizes
-    let full = 'is-' + word;
-
-    wordSizesKebab.push(full);
-    wordSizesCamel.push(camelCase(full));
-
-    Object.assign(properties, {
-      [camelCase(full)]: Boolean,
-    });
-
-    // Offset sizes
-    full = 'is-offset-' + word;
-
-    wordOffsetSizesKebab.push(full);
-    wordOffsetSizesCamel.push(camelCase(full));
-
-    Object.assign(properties, {
-      [camelCase(full)]: Boolean,
-    });
+  // Word sizes
+  for (let word of sizeWords) {
+    generateSizes(word);
   }
 
-  for (let i = 1; i <= 12; i++) {
-    numSizesCamel.push('is' + i);
-    numSizesKebab.push('is-' + i);
+  // Num sizes
+  for (let num of sizeNums) {
+    generateSizes(num);
+  }
 
-    numSizesOffsetCamel.push(camelCase('is-offset') + i);
-    numSizesOffsetKebab.push('is-offset-' + i);
+  function generateSizes(word) {
+    for (let prefix of sizePrefixes) {
+      let size = prefix + '-' + word;
 
-    Object.assign(properties, {
-      ['is' + i]: Boolean,
-      ['is-offset' + i]: Boolean,
-    });
+      sizes.push(size);
+      sizesCamel.push(camelCase(size));
+
+      Object.assign(properties, {
+        [size]: Boolean
+      });
+
+      // Suffixes
+      for (let suffix of sizeSuffixes) {
+        let sizeWithSuffix = size + '-' + suffix;
+
+        sizes.push(sizeWithSuffix);
+        sizesCamel.push(camelCase(sizeWithSuffix));
+
+        Object.assign(properties, {
+          [sizeWithSuffix]: Boolean
+        });
+      }
+    }
   }
 
   function camelCase(string) {
-    return string.replace(/(\-[a-z])/g, function($1){return $1.toUpperCase().replace('-','');});
+    return string.replace(/(\-[a-z0-9])/g, function($1){return $1.toUpperCase().replace('-','');});
   }
 
   export default {
@@ -69,17 +73,9 @@
     },
 
     created() {
-      for (let [index, word] of wordSizesCamel.entries()) {
+      for (let [index, word] of sizes.entries()) {
         Object.assign(this.sizingClasses, {
-          [wordSizesKebab[index]]: this[wordSizesCamel[index]],
-          [wordOffsetSizesKebab[index]]: this[wordOffsetSizesCamel[index]],
-        });
-      }
-
-      for (let [index, word] of numSizesCamel.entries()) {
-        Object.assign(this.sizingClasses, {
-          [numSizesKebab[index]]: this[numSizesCamel[index]],
-          [numSizesOffsetKebab[index]]: this[numSizesOffsetCamel[index]],
+          [sizes[index]]: this[sizesCamel[index]],
         });
       }
     },
