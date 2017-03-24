@@ -1,6 +1,6 @@
 {
   "name": "videl",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Frontend framework for Vue2. Based on Bulma.",
   "main": "index.js",
   "repository": {
