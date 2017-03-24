@@ -15,9 +15,7 @@ const path = require('path')
 
 mix.webpackConfig({
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    publicPath: 'dist/',
-    library: 'Vuetify'
+    library: 'Videl'
   },
 });
 
