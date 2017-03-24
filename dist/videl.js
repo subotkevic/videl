@@ -429,8 +429,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Columns_Columns___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__Columns_Columns__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Columns_Column__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Columns_Column___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__Columns_Column__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Button_Button__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Button_Button___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__Button_Button__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Tile_Tile__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Tile_Tile___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__Tile_Tile__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Button_Button__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Button_Button___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__Button_Button__);
+
 
 
 
@@ -438,7 +441,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony default export */ __webpack_exports__["a"] = ({
   Columns: __WEBPACK_IMPORTED_MODULE_0__Columns_Columns___default.a,
   Column: __WEBPACK_IMPORTED_MODULE_1__Columns_Column___default.a,
-  Button: __WEBPACK_IMPORTED_MODULE_2__Button_Button___default.a
+  Tile: __WEBPACK_IMPORTED_MODULE_2__Tile_Tile___default.a,
+  Button: __WEBPACK_IMPORTED_MODULE_3__Button_Button___default.a
 });
 
 /***/ }),
@@ -624,6 +628,205 @@ if (false) {
 __webpack_require__(1);
 module.exports = __webpack_require__(2);
 
+
+/***/ }),
+/* 15 */,
+/* 16 */,
+/* 17 */,
+/* 18 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }();
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+//
+//
+//
+//
+//
+//
+
+var sizePrefixes = ['is'];
+var sizeNums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+var properties = {
+  'is-ancestor': Boolean,
+  'is-parent': Boolean,
+  'is-child': Boolean,
+  'is-vertical': Boolean
+};
+var sizes = [];
+var sizesCamel = [];
+
+// Sizes
+var _iteratorNormalCompletion = true;
+var _didIteratorError = false;
+var _iteratorError = undefined;
+
+try {
+  for (var _iterator = sizeNums[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+    var num = _step.value;
+
+    generateSizes(num);
+  }
+} catch (err) {
+  _didIteratorError = true;
+  _iteratorError = err;
+} finally {
+  try {
+    if (!_iteratorNormalCompletion && _iterator.return) {
+      _iterator.return();
+    }
+  } finally {
+    if (_didIteratorError) {
+      throw _iteratorError;
+    }
+  }
+}
+
+function generateSizes(word) {
+  var _iteratorNormalCompletion2 = true;
+  var _didIteratorError2 = false;
+  var _iteratorError2 = undefined;
+
+  try {
+    for (var _iterator2 = sizePrefixes[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
+      var prefix = _step2.value;
+
+      var size = prefix + '-' + word;
+
+      sizes.push(size);
+      sizesCamel.push(camelCase(size));
+
+      Object.assign(properties, _defineProperty({}, size, Boolean));
+    }
+  } catch (err) {
+    _didIteratorError2 = true;
+    _iteratorError2 = err;
+  } finally {
+    try {
+      if (!_iteratorNormalCompletion2 && _iterator2.return) {
+        _iterator2.return();
+      }
+    } finally {
+      if (_didIteratorError2) {
+        throw _iteratorError2;
+      }
+    }
+  }
+}
+
+function camelCase(string) {
+  return string.replace(/(\-[a-z0-9])/g, function ($1) {
+    return $1.toUpperCase().replace('-', '');
+  });
+}
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      sizingClasses: {}
+    };
+  },
+  created: function created() {
+    var _iteratorNormalCompletion3 = true;
+    var _didIteratorError3 = false;
+    var _iteratorError3 = undefined;
+
+    try {
+      for (var _iterator3 = sizes.entries()[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
+        var _step3$value = _slicedToArray(_step3.value, 2),
+            index = _step3$value[0],
+            word = _step3$value[1];
+
+        Object.assign(this.sizingClasses, _defineProperty({}, sizes[index], this[sizesCamel[index]]));
+      }
+    } catch (err) {
+      _didIteratorError3 = true;
+      _iteratorError3 = err;
+    } finally {
+      try {
+        if (!_iteratorNormalCompletion3 && _iterator3.return) {
+          _iterator3.return();
+        }
+      } finally {
+        if (_didIteratorError3) {
+          throw _iteratorError3;
+        }
+      }
+    }
+  },
+
+
+  computed: {
+    classes: function classes() {
+      var classes = {
+        'is-ancestor': this.isAncestor,
+        'is-parent': this.isParent,
+        'is-child': this.isChild,
+        'is-vertical': this.isVertical
+      };
+
+      return Object.assign(this.sizingClasses, classes);
+    }
+  },
+
+  props: properties
+});
+
+/***/ }),
+/* 19 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var Component = __webpack_require__(0)(
+  /* script */
+  __webpack_require__(18),
+  /* template */
+  __webpack_require__(20),
+  /* scopeId */
+  null,
+  /* cssModules */
+  null
+)
+Component.options.__file = "/Users/artur/Code/videl/src/components/Tile/Tile.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] Tile.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-77321bc6", Component.options)
+  } else {
+    hotAPI.reload("data-v-77321bc6", Component.options)
+  }
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 20 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "tile",
+    class: _vm.classes
+  }, [_vm._t("default")], 2)
+},staticRenderFns: []}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-77321bc6", module.exports)
+  }
+}
 
 /***/ })
 /******/ ]);
