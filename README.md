@@ -1,6 +1,6 @@
 # Videl
 
-**Videl** is a component framework for Vue2. Based on CSS framework Bulma.
+**Videl** is a component framework for Vue2. Based on Bulma.
 
 ## Install
 
