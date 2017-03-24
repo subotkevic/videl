@@ -1,0 +1,36 @@
+{
+  "name": "vegeta",
+  "version": "0.1.0",
+  "description": "Frontend framework for Vue2. Based on Bulma.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/subotkevic/vegeta.git"
+  },
+  "keywords": [
+    "css",
+    "frontend",
+    "js",
+    "framework",
+    "flexbox",
+    "vue2",
+    "frontend-framework"
+  ],
+  "author": "subotkevic",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/subotkevic/vegeta/issues"
+  },
+  "homepage": "https://github.com/subotkevic/vegeta#readme",
+  "devDependencies": {
+    "bulma": "^0.4.0",
+    "laravel-mix": "^0.8.8",
+    "node-sass": "^4.5.1"
+  },
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development webpack --progress --hide-modules",
+    "watch": "cross-env NODE_ENV=development webpack --watch --progress --hide-modules",
+    "hot": "cross-env NODE_ENV=development webpack-dev-server --inline --hot",
+    "production": "cross-env NODE_ENV=production webpack --progress --hide-modules"
+  }
+}

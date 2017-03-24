@@ -1,2 +1,6 @@
 # Vegeta
-Vegeta – frontend framework for Vue2. Based on Bulma.
+Vegeta is a component framework for Vue2. Based on Bulma.
+
+## Quick start
+
+Coming Soon.
