@@ -11,5 +11,15 @@ let mix = require('laravel-mix');
  |
  */
 
+const path = require('path')
+
+mix.webpackConfig({
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    publicPath: 'dist/',
+    library: 'Vuetify'
+  },
+});
+
 mix.js('src/videl.js', 'dist/')
    .sass('src/videl.scss', 'dist/');
