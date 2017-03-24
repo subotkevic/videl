@@ -12,7 +12,7 @@ function plugin (Vue, options) {
     Vue.component(`${options.componentPrefix}${name}`, Components[name])
   })
 
-  Vue.prototype.$vegeta = {
+  Vue.prototype.$videl = {
     load: Load
   }
 }

@@ -12,11 +12,12 @@ let mix = require('laravel-mix');
  */
 
 mix.webpackConfig({
- output: {
-   library: 'Videl',
-   libraryTarget: 'umd',
- },
+  output: {
+    library: 'Videl',
+    libraryTarget: 'umd',
+  },
 });
 
-mix.js('src/videl.js', 'dist/')
-   .sass('src/videl.scss', 'dist/');
+mix
+  .js('src/videl.js', 'dist/')
+  .sass('src/videl.scss', 'dist/');

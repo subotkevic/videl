@@ -12,8 +12,8 @@ npm install videl --save-dev
 ## Use
 
 ```javascript
-import Vue from 'vue'
-import Videl from 'videl'
+let Vue = require('vue');
+let Videl = require('videl');
 
 Vue.use(Videl)
 ```
