@@ -15,7 +15,12 @@
   let numSizesOffsetCamel  = [];
   let numSizesKebab        = [];
   let numSizesOffsetKebab  = [];
-  let properties           = {};
+  let properties           = {
+    'is-narrow': Boolean,
+    'is-narrow-mobile': Boolean,
+    'is-narrow-tablet': Boolean,
+    'is-narrow-desktop': Boolean,
+  };
 
   for (let word of words) {
     // Sizes
@@ -81,11 +86,14 @@
 
     computed: {
       classes () {
-        let otherClasses = {
-
+        let classes = {
+          'is-narrow': this.isNarrow,
+          'is-narrow-mobile': this.isNarrowMobile,
+          'is-narrow-tablet': this.isNarrowTablet,
+          'is-narrow-desktop': this.isNarrowDesktop,
         };
 
-        return Object.assign(this.sizingClasses, otherClasses);
+        return Object.assign(this.sizingClasses, classes);
       }
     },
 
