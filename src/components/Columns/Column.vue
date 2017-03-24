@@ -5,26 +5,18 @@
 </template>
 
 <script>
-  let sizeWords            = ['three-quarters', 'two-thirds', 'half', 'one-third', 'one-quarter'];
-  let sizePrefixes         = ['is', 'is-offset'];
-  let sizeSuffixes         = ['mobile', 'tablet', 'desktop'];
-  let sizeNums             = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
-  let wordSizesCamel       = [];
-  let wordOffsetSizesCamel = [];
-  let wordSizesKebab       = [];
-  let wordOffsetSizesKebab = [];
-  let numSizesCamel        = [];
-  let numSizesOffsetCamel  = [];
-  let numSizesKebab        = [];
-  let numSizesOffsetKebab  = [];
-  let properties           = {
+  let sizeWords    = ['three-quarters', 'two-thirds', 'half', 'one-third', 'one-quarter'];
+  let sizePrefixes = ['is', 'is-offset'];
+  let sizeSuffixes = ['mobile', 'tablet', 'desktop'];
+  let sizeNums     = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+  let properties   = {
     'is-narrow': Boolean,
     'is-narrow-mobile': Boolean,
     'is-narrow-tablet': Boolean,
     'is-narrow-desktop': Boolean,
   };
-  let sizes      = [];
-  let sizesCamel = [];
+  let sizes        = [];
+  let sizesCamel   = [];
 
   // Word sizes
   for (let word of sizeWords) {
