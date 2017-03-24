@@ -1,1 +1,95 @@
-!function(e){function t(r){if(n[r])return n[r].exports;var o=n[r]={i:r,l:!1,exports:{}};return e[r].call(o.exports,o,o.exports,t),o.l=!0,o.exports}var n={};t.m=e,t.c=n,t.i=function(e){return e},t.d=function(e,n,r){t.o(e,n)||Object.defineProperty(e,n,{configurable:!1,enumerable:!0,get:r})},t.n=function(e){var n=e&&e.__esModule?function(){return e.default}:function(){return e};return t.d(n,"a",n),n},t.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},t.p="./",t(t.s=14)}([function(e,t){e.exports=function(e,t,n,r){var o,s=e=e||{},i=typeof e.default;"object"!==i&&"function"!==i||(o=e,s=e.default);var a="function"==typeof s?s.options:s;if(t&&(a.render=t.render,a.staticRenderFns=t.staticRenderFns),n&&(a._scopeId=n),r){var u=a.computed||(a.computed={});Object.keys(r).forEach(function(e){var t=r[e];u[e]=function(){return t}})}return{esModule:o,exports:s,options:a}}},function(e,t,n){"use strict";function r(e,t){t=Object.assign(i,t||{}),Object.keys(o.a).forEach(function(n){e.component(""+t.componentPrefix+n,o.a[n])}),e.prototype.$vegeta={load:s.a}}Object.defineProperty(t,"__esModule",{value:!0});var o=n(6),s=n(7),i={componentPrefix:"Vg"};"undefined"!=typeof window&&window.Vue&&window.Vue.use(r),t.default=r},function(e,t){},function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t.default={}},function(e,t,n){"use strict";function r(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function o(e){return e.replace(/(\-[a-z])/g,function(e){return e.toUpperCase().replace("-","")})}Object.defineProperty(t,"__esModule",{value:!0});var s=function(){function e(e,t){var n=[],r=!0,o=!1,s=void 0;try{for(var i,a=e[Symbol.iterator]();!(r=(i=a.next()).done)&&(n.push(i.value),!t||n.length!==t);r=!0);}catch(e){o=!0,s=e}finally{try{!r&&a.return&&a.return()}finally{if(o)throw s}}return n}return function(t,n){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,n);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),i=["three-quarters","two-thirds","half","one-third","one-quarter"],a=[],u=[],l=[],c=[],f=[],d=[],p=[],v=[],h={"is-narrow":Boolean,"is-narrow-mobile":Boolean,"is-narrow-tablet":Boolean,"is-narrow-desktop":Boolean},b=!0,y=!1,m=void 0;try{for(var w,x=i[Symbol.iterator]();!(b=(w=x.next()).done);b=!0){var g=w.value,_="is-"+g;l.push(_),a.push(o(_)),Object.assign(h,r({},o(_),Boolean)),_="is-offset-"+g,c.push(_),u.push(o(_)),Object.assign(h,r({},o(_),Boolean))}}catch(e){y=!0,m=e}finally{try{!b&&x.return&&x.return()}finally{if(y)throw m}}for(var O=1;O<=12;O++){var j;f.push("is"+O),p.push("is-"+O),d.push(o("is-offset")+O),v.push("is-offset-"+O),Object.assign(h,(j={},r(j,"is"+O,Boolean),r(j,"is-offset"+O,Boolean),j))}t.default={data:function(){return{sizingClasses:{}}},created:function(){var e=!0,t=!1,n=void 0;try{for(var o,i=a.entries()[Symbol.iterator]();!(e=(o=i.next()).done);e=!0){var h,b=s(o.value,2),y=b[0];b[1];Object.assign(this.sizingClasses,(h={},r(h,l[y],this[a[y]]),r(h,c[y],this[u[y]]),h))}}catch(e){t=!0,n=e}finally{try{!e&&i.return&&i.return()}finally{if(t)throw n}}var m=!0,w=!1,x=void 0;try{for(var g,_=f.entries()[Symbol.iterator]();!(m=(g=_.next()).done);m=!0){var O,j=s(g.value,2),y=j[0];j[1];Object.assign(this.sizingClasses,(O={},r(O,p[y],this[f[y]]),r(O,v[y],this[d[y]]),O))}}catch(e){w=!0,x=e}finally{try{!m&&_.return&&_.return()}finally{if(w)throw x}}},computed:{classes:function e(){var e={"is-narrow":this.isNarrow,"is-narrow-mobile":this.isNarrowMobile,"is-narrow-tablet":this.isNarrowTablet,"is-narrow-desktop":this.isNarrowDesktop};return Object.assign(this.sizingClasses,e)}},props:h}},function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t.default={props:{"is-mobile":Boolean,"is-desktop":Boolean,"is-multiline":Boolean,"is-gapless":Boolean},computed:{classes:function(){return{"is-mobile":this.isMobile,"is-desktop":this.isDesktop,"is-multiline":this.isMultiline,"is-gapless":this.isGapless}}}}},function(e,t,n){"use strict";var r=n(10),o=n.n(r),s=n(9),i=n.n(s),a=n(8),u=n.n(a);t.a={Columns:o.a,Column:i.a,Button:u.a}},function(e,t,n){"use strict";function r(e){return"complete"===document.readyState?setTimeout(e,0):"interactive"===document.readyState?setTimeout(function(){return r(e)},150):void document.addEventListener("DOMContentLoaded",e)}t.a=r},function(e,t,n){var r=n(0)(n(3),n(13),null,null);e.exports=r.exports},function(e,t,n){var r=n(0)(n(4),n(11),null,null);e.exports=r.exports},function(e,t,n){var r=n(0)(n(5),n(12),null,null);e.exports=r.exports},function(e,t){e.exports={render:function(){var e=this,t=e.$createElement;return(e._self._c||t)("div",{staticClass:"column",class:e.classes},[e._t("default")],2)},staticRenderFns:[]}},function(e,t){e.exports={render:function(){var e=this,t=e.$createElement;return(e._self._c||t)("div",{staticClass:"columns",class:e.classes},[e._t("default")],2)},staticRenderFns:[]}},function(e,t){e.exports={render:function(){var e=this,t=e.$createElement;return(e._self._c||t)("button",{staticClass:"button"},[e._t("default")],2)},staticRenderFns:[]}},function(e,t,n){n(1),e.exports=n(2)}]);
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId])
+/******/ 			return installedModules[moduleId].exports;
+/******/
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// identity function for calling harmony imports with the correct context
+/******/ 	__webpack_require__.i = function(value) { return value; };
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, {
+/******/ 				configurable: false,
+/******/ 				enumerable: true,
+/******/ 				get: getter
+/******/ 			});
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "./";
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = 14);
+/******/ })
+/************************************************************************/
+/******/ ({
+
+/***/ 1:
+/***/ (function(module, __webpack_exports__) {
+
+"use strict";
+throw new Error("Module build failed: Error: ENOENT: no such file or directory, open '/Users/artur/Code/videl/src/vegeta.js'");
+
+/***/ }),
+
+/***/ 14:
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(1);
+module.exports = __webpack_require__(2);
+
+
+/***/ }),
+
+/***/ 2:
+/***/ (function(module, exports) {
+
+throw new Error("Module build failed: Error\n    at /Users/artur/Code/videl/node_modules/webpack/lib/NormalModule.js:141:35\n    at /Users/artur/Code/videl/node_modules/loader-runner/lib/LoaderRunner.js:364:11\n    at /Users/artur/Code/videl/node_modules/loader-runner/lib/LoaderRunner.js:200:19\n    at /Users/artur/Code/videl/node_modules/enhanced-resolve/lib/CachedInputFileSystem.js:62:14\n    at _combinedTickCallback (internal/process/next_tick.js:67:7)\n    at process._tickCallback (internal/process/next_tick.js:98:9)");
+
+/***/ })
+
+/******/ });

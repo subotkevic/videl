@@ -11,5 +11,5 @@ let mix = require('laravel-mix');
  |
  */
 
-mix.js('src/vegeta.js', 'dist/')
-   .sass('src/vegeta.scss', 'dist/');
+mix.js('src/videl.js', 'dist/')
+   .sass('src/videl.scss', 'dist/');

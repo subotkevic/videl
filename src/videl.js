@@ -2,7 +2,7 @@ import Components from './components/_components'
 import Load from './utilities/load'
 
 const defaults = {
-  componentPrefix: 'Vg',
+  componentPrefix: 'Vd',
 }
 
 function plugin (Vue, options) {
