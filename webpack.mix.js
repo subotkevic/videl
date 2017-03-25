@@ -15,7 +15,6 @@ mix.webpackConfig({
   output: {
     library: 'Videl',
     libraryTarget: 'umd',
-    umdNamedDefine: true
   },
 });
 
