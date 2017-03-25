@@ -5,7 +5,7 @@ import Columns from './components/Columns/Columns'
 import Column from './components/Columns/Column'
 import Tile from './components/Tile/Tile'
 import Box from './components/Box/Box'
-import Button from './components/Button/Button'
+import VdButton from './components/VdButton/VdButton'
 import Content from './components/Content/Content'
 import Delete from './components/Delete/Delete'
 import Field from './components/Form/Field'
@@ -26,7 +26,7 @@ const components = {
   Column,
   Tile,
   Box,
-  Button,
+  VdButton,
   Content,
   Delete,
   Field,
@@ -44,7 +44,7 @@ const Videl = {
   Column,
   Tile,
   Box,
-  Button,
+  VdButton,
   Content,
   Delete,
   Field,
@@ -56,7 +56,7 @@ const Videl = {
   Textarea,
 
   install(Vue) {
-    Vue.component('vd-button', Button);
+    Vue.component('vd-button', VdButton);
   }
 };
 
@@ -72,7 +72,7 @@ export { Columns };
 export { Column };
 export { Tile };
 export { Box };
-export { Button };
+export { VdButton };
 export { Content };
 export { Delete };
 export { Field };
