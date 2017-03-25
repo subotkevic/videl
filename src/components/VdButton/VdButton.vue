@@ -10,8 +10,6 @@
 
 <script>
   export default {
-    name: 'vd-button',
-
     data() {
       return {
       }
