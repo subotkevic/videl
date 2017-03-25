@@ -8,13 +8,13 @@
 
 **Videl** is a component framework for Vue2. Based on Bulma.
 
-## Install via NPM
+## Install
 
 ``` bash
 npm install videl --save-dev
 ```
 
-### Use
+## Use
 
 ```javascript
 let Vue = require('vue');
@@ -25,22 +25,14 @@ Vue.use(Videl)
 
 ## Install via CDN
 
-### Styles
-
 ``` html
 <link rel="stylesheet" href="https://unpkg.com/videl/dist/videl.css">
-```
 
-### Scripts
-
-``` html
 <script src="https://unpkg.com/vue/dist/vue.js"></script>
 <script src="https://unpkg.com/videl/dist/videl.js"></script>
 ```
 
-## "Hello World" example
-
-We're using CDN for this simple example:
+## Example
 
 ``` html
 <!DOCTYPE html>
@@ -52,10 +44,8 @@ We're using CDN for this simple example:
     </head>
 
     <body>
-    
-        <!-- App -->
         <div id="vd-app">
-        
+
             <!-- Container -->
             <vd-container>
             
@@ -74,13 +64,10 @@ We're using CDN for this simple example:
         <script src="https://unpkg.com/videl/dist/videl.js"></script>
         
         <script>
-            
             new Vue({
                 el: '#vd-app'
             })
-        	
         </script>
-        
     </body>
 </html>
 ```

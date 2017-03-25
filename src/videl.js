@@ -1,5 +1,6 @@
 import Components from './components/_components'
 import Load from './utilities/load'
+import camelCase from './utilities/camel-case'
 
 const defaults = {
   componentPrefix: 'Vd',

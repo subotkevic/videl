@@ -4,6 +4,8 @@ import Column from './Columns/Column'
 import Tile from './Tile/Tile'
 import Box from './Box/Box'
 import Button from './Button/Button'
+import Content from './Content/Content'
+import Delete from './Delete/Delete'
 
 export default {
   Container,
@@ -12,4 +14,6 @@ export default {
   Tile,
   Box,
   Button,
+  Content,
+  Delete,
 }
