@@ -1,3 +1,9 @@
+<p align="center">
+    <a href="https://www.npmjs.com/package/videl"><img src="https://img.shields.io/npm/dt/videl.svg" alt="Downloads"></a>
+    <a href="https://www.npmjs.com/package/videl"><img src="https://img.shields.io/npm/v/videl.svg" alt="Version"></a>
+    <a href="https://www.npmjs.com/package/videl"><img src="https://img.shields.io/npm/l/videl.svg" alt="License"></a>
+</p>
+
 # Videl
 
 **Videl** is a component framework for Vue2. Based on Bulma.
