@@ -68,10 +68,10 @@ We're using CDN for this simple example:
         <script src="https://unpkg.com/videl/dist/videl.js"></script>
         
         <script>
-        
-        	new Vue({
-        		el: '#vd-app'
-        	})
+            
+            new Vue({
+                el: '#vd-app'
+            })
         	
         </script>
         
