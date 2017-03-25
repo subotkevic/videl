@@ -56,9 +56,7 @@ const Videl = {
   Textarea,
 
   install(Vue) {
-    Object.keys(components).forEach(name => {
-      Vue.component(`${defaults.componentPrefix}${name}`, components[name])
-    })
+    Vue.component('vd-button', Button);
   }
 };
 
