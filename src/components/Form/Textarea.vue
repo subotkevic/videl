@@ -1,20 +1,9 @@
 <template>
-  <button class="button" :class="classes" v-if="el == 'button'">
-    <slot></slot>
-  </button>
-
-  <a class="button" :class="classes" v-else>
-    <slot></slot>
-  </a>
+  <textarea class="textarea" :class="classes">{{ value }}</textarea>
 </template>
 
 <script>
   export default {
-    data() {
-      return {
-      }
-    },
-
     props: {
       'is-white': Boolean,
       'is-light': Boolean,
@@ -29,17 +18,9 @@
       'is-small': Boolean,
       'is-medium': Boolean,
       'is-large': Boolean,
-      'is-outlined': Boolean,
-      'is-inverted': Boolean,
       'is-hovered': Boolean,
       'is-focused': Boolean,
-      'is-active': Boolean,
-      'is-loading': Boolean,
-      'is-disabled': Boolean,
-      'el': {
-        type: String,
-        default: 'a',
-      },
+      'value': {},
     },
 
     computed: {
@@ -58,13 +39,8 @@
           'is-small': this.isSmall,
           'is-medium': this.isMedium,
           'is-large': this.isLarge,
-          'is-outlined': this.isOutlined,
-          'is-inverted': this.isInverted,
           'is-hovered': this.isHovered,
           'is-focused': this.isFocused,
-          'is-active': this.isActive,
-          'is-loading': this.isLoading,
-          'is-disabled': this.isDisabled,
         }
       }
     }
