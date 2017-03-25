@@ -4,9 +4,13 @@
     <a href="https://www.npmjs.com/package/videl"><img src="https://img.shields.io/npm/l/videl.svg" alt="License"></a>
 </p>
 
-# Videl
+<p align="center">
+    <img src="https://cloud.githubusercontent.com/assets/2277261/24318452/35ee05ba-110e-11e7-883b-90a710483e34.png" height="128">
+</p>
 
-**Videl** is a component framework for Vue2. Based on Bulma.
+<p align="center">
+    <strong>Videl</strong> is a component framework for Vue2. Based on Bulma.
+</p>
 
 ## Install
 
