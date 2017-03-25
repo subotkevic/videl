@@ -1,5 +1,3 @@
-require('./videl.scss')
-
 import Components from './components/_components'
 import Load from './utilities/load'
 import camelCase from './utilities/camel-case'
@@ -8,20 +6,17 @@ const defaults = {
   componentPrefix: 'Vd',
 }
 
-function plugin (Vue, options) {
-  options = Object.assign(defaults, (options || {}))
-
-  Object.keys(Components).forEach(name => {
-    Vue.component(`${options.componentPrefix}${name}`, Components[name])
-  })
-
-  Vue.prototype.$videl = {
-    load: Load
+const Videl = {
+  install(Vue) {
+    Object.keys(Components).forEach(name => {
+      Vue.component(`${defaults.componentPrefix}${name}`, Components[name])
+    })
   }
 }
 
+// Automatically install Videl if Vue is available globally
 if (typeof window !== 'undefined' && window.Vue) {
-  window.Vue.use(plugin)
+    window.Vue.use(Videl);
 }
 
-export default plugin
+export default Videl

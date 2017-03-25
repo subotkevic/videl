@@ -14,7 +14,7 @@ let mix = require('laravel-mix');
 mix.webpackConfig({
   output: {
     library: 'Videl',
-    libraryTarget: 'amd',
+    libraryTarget: 'umd',
     umdNamedDefine: true
   },
 });
