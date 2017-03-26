@@ -33,7 +33,7 @@ Vue.use(Videl)
 <link rel="stylesheet" href="https://unpkg.com/videl/dist/videl.min.css">
 
 <script src="https://unpkg.com/vue/dist/vue.js"></script>
-<script src="https://unpkg.com/videl/dist/videl.js"></script>
+<script src="https://unpkg.com/videl/dist/videl.min.js"></script>
 ```
 
 ## Example
