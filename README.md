@@ -30,7 +30,7 @@ Vue.use(Videl)
 ## Install via CDN
 
 ``` html
-<link rel="stylesheet" href="https://unpkg.com/videl/dist/videl.css">
+<link rel="stylesheet" href="https://unpkg.com/videl/dist/videl.min.css">
 
 <script src="https://unpkg.com/vue/dist/vue.js"></script>
 <script src="https://unpkg.com/videl/dist/videl.js"></script>
@@ -42,7 +42,7 @@ Vue.use(Videl)
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="https://unpkg.com/videl/dist/videl.css">
+        <link rel="stylesheet" href="https://unpkg.com/videl/dist/videl.min.css">
 
         <title>Videl example</title>
     </head>
@@ -65,7 +65,7 @@ Vue.use(Videl)
 
         <!-- Scripts -->
         <script src="https://unpkg.com/vue/dist/vue.js"></script>
-        <script src="https://unpkg.com/videl/dist/videl.js"></script>
+        <script src="https://unpkg.com/videl/dist/videl.min.js"></script>
         
         <script>
             new Vue({

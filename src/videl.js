@@ -16,6 +16,8 @@ import Control from './components/Form/Control'
 import Input from './components/Form/Input'
 import Textarea from './components/Form/Textarea'
 
+import './videl.scss';
+
 const defaults = {
   componentPrefix: 'Vd',
 }
@@ -39,24 +41,10 @@ const components = {
 };
 
 const Videl = {
-  Container,
-  Columns,
-  Column,
-  Tile,
-  Box,
-  Button,
-  Content,
-  Delete,
-  Field,
-  FieldLabel,
-  FieldBody,
-  Label,
-  Control,
-  Input,
-  Textarea,
-
   install(Vue) {
-    Vue.component('vd-button', Button);
+    Object.keys(components).forEach((name) => {
+      Vue.component(defaults.componentPrefix + name, components[name]);
+    })
   }
 };
 
@@ -66,19 +54,3 @@ if (typeof window !== 'undefined' && window.Vue) {
 }
 
 export default Videl;
-
-export { Container };
-export { Columns };
-export { Column };
-export { Tile };
-export { Box };
-export { Button };
-export { Content };
-export { Delete };
-export { Field };
-export { FieldLabel };
-export { FieldBody };
-export { Label };
-export { Control };
-export { Input };
-export { Textarea };
