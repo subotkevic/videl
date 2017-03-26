@@ -46,7 +46,8 @@
     "vue-template-compiler": "^2.1.7",
     "webpack": "^2.2.0",
     "webpack-dev-server": "^2.2.0",
-    "webpack-merge": "^4.1.0"
+    "webpack-merge": "^4.1.0",
+    "uglify-js": "git+https://github.com/mishoo/UglifyJS2.git#harmony"
   },
   "scripts": {
     "dev": "TARGET=dev webpack --config build/config.js --progress --hide-modules",
