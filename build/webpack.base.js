@@ -3,7 +3,7 @@ const path = require('path')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const banner =
   '/*!\n' +
-  ' * Videl v' + require('../package.json').version + ' (https://github.com/subotkevic/videl)\n' +
+  ' * Videl (https://github.com/subotkevic/videl)\n' +
   ' * (c) ' + new Date().getFullYear() + ' Artur Subotkevič\n' +
   ' * Released under the MIT License.\n' +
   ' */';

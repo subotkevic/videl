@@ -9,8 +9,10 @@ then
   echo "Releasing $VERSION ..."
 
   npm run build
+
   git add -A
   git commit -m "[Build] $VERSION"
+
   npm version $VERSION --message "[Release] $VERSION"
 
   git push

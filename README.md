@@ -48,7 +48,7 @@ Vue.use(Videl)
     </head>
 
     <body>
-        <div id="vd-app">
+        <div id="app">
 
             <!-- Container -->
             <vd-container>
@@ -69,7 +69,7 @@ Vue.use(Videl)
         
         <script>
             new Vue({
-                el: '#vd-app'
+                el: '#app'
             })
         </script>
     </body>

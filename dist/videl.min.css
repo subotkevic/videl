@@ -1,5 +1,5 @@
 /*!
- * Videl v0.3.11 (https://github.com/subotkevic/videl)
+ * Videl (https://github.com/subotkevic/videl)
  * (c) 2017 Artur Subotkevič
  * Released under the MIT License.
  */

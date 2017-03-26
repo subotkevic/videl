@@ -1,5 +1,5 @@
 /*!
- * Videl v0.3.11 (https://github.com/subotkevic/videl)
+ * Videl (https://github.com/subotkevic/videl)
  * (c) 2017 Artur Subotkevič
  * Released under the MIT License.
  */
@@ -1064,6 +1064,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__components_Form_Textarea___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_15__components_Form_Textarea__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__videl_scss__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__videl_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_16__videl_scss__);
+// Helpers
+
+
+// Components
 
 
 
@@ -1080,8 +1084,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
-
-
+// Styles
 
 
 const defaults = {

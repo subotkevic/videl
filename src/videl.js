@@ -1,5 +1,7 @@
+// Helpers
 import camelCase from './utilities/camel-case'
 
+// Components
 import Container from './components/Container/Container'
 import Columns from './components/Columns/Columns'
 import Column from './components/Columns/Column'
@@ -16,6 +18,7 @@ import Control from './components/Form/Control'
 import Input from './components/Form/Input'
 import Textarea from './components/Form/Textarea'
 
+// Styles
 import './videl.scss';
 
 const defaults = {
