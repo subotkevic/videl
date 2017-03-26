@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-    <strong>Videl</strong> is a component framework for Vue2. Based on Bulma.
+    <strong>Videl</strong> is a component framework for Vue2. Based on [Bulma](http://bulma.io).
 </p>
 
 ## Install
