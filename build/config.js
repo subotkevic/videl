@@ -1,6 +1,7 @@
 const base = require('./webpack.base.js')
 const webpack = require('webpack')
 const merge = require('webpack-merge')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 const builds = {
   'dev': {
@@ -25,7 +26,17 @@ function genConfig (opts) {
   config.plugins = config.plugins.concat([
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': opts.env || 'development'
-    })
+    }),
+
+    new webpack.LoaderOptionsPlugin({
+      minimize: false,
+      progress: true,
+      hide_modules: true
+    }),
+
+    new ExtractTextPlugin({
+        filename: 'videl.css'
+    }),
   ])
   if (opts.env) {
     config.plugins = config.plugins.concat([
@@ -33,7 +44,17 @@ function genConfig (opts) {
         compress: {
           warnings: false
         }
-      })
+      }),
+
+      // new webpack.LoaderOptionsPlugin({
+      //   minimize: true,
+      //   progress: true,
+      //   hide_modules: true
+      // }),
+
+      // new ExtractTextPlugin({
+      //     filename: 'videl.min.css'
+      // }),
     ])
   }
 

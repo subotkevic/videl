@@ -16,7 +16,7 @@ npm install videl --save-dev
 
 ## Use
 
-> Make sure to include the **dist/videl.min.css** file as the styles have been extracted into a single CSS file.
+> Make sure to include the **dist/videl.css** file as the styles have been extracted into a single CSS file.
 
 ```javascript
 import 'Vue' from 'vue'
@@ -28,7 +28,7 @@ Vue.use(Videl)
 ## Install via CDN
 
 ``` html
-<link rel="stylesheet" href="https://unpkg.com/videl/dist/videl.min.css">
+<link rel="stylesheet" href="https://unpkg.com/videl/dist/videl.css">
 
 <script src="https://unpkg.com/vue/dist/vue.js"></script>
 <script src="https://unpkg.com/videl/dist/videl.min.js"></script>
@@ -40,7 +40,7 @@ Vue.use(Videl)
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="https://unpkg.com/videl/dist/videl.min.css">
+        <link rel="stylesheet" href="https://unpkg.com/videl/dist/videl.css">
 
         <title>Videl example</title>
     </head>

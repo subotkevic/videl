@@ -45,7 +45,7 @@ module.exports = {
       {
         test: /\.scss$/,
         loaders: ExtractTextPlugin.extract({
-          loader: ['css-loader', 'sass-loader']
+          loader: ['css-loader!sass-loader']
         }),
         include: projectRoot,
         exclude: /node_modules/
@@ -56,17 +56,11 @@ module.exports = {
     hints: process.env.NODE_ENV === 'production' ? 'warning' : false
   },
   plugins: [
-    new webpack.LoaderOptionsPlugin({
-      minimize: true,
-      progress: true,
-      hide_modules: true
-    }),
     new webpack.BannerPlugin({
         banner: banner,
         raw: true,
         entryOnly: true
     }),
-    new ExtractTextPlugin('videl.min.css'),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development')
     })

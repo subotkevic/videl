@@ -17,6 +17,7 @@ import Label from './components/Form/Label'
 import Control from './components/Form/Control'
 import Input from './components/Form/Input'
 import Textarea from './components/Form/Textarea'
+import Select from './components/Form/Select'
 
 // Styles
 import './videl.scss';
@@ -41,6 +42,7 @@ const components = {
   Control,
   Input,
   Textarea,
+  Select,
 };
 
 const Videl = {
