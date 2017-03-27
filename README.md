@@ -16,6 +16,8 @@ npm install videl --save-dev
 
 ## Use
 
+> Make sure to include the **dist/videl.min.css** file as the styles have been extracted into a single CSS file.
+
 ```javascript
 import 'Vue' from 'vue'
 import 'Videl' from 'videl'
