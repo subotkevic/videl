@@ -27,16 +27,6 @@ function genConfig (opts) {
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': opts.env || 'development'
     }),
-
-    new webpack.LoaderOptionsPlugin({
-      minimize: false,
-      progress: true,
-      hide_modules: true
-    }),
-
-    new ExtractTextPlugin({
-        filename: 'videl.css'
-    }),
   ])
   if (opts.env) {
     config.plugins = config.plugins.concat([
@@ -46,15 +36,29 @@ function genConfig (opts) {
         }
       }),
 
-      // new webpack.LoaderOptionsPlugin({
-      //   minimize: true,
-      //   progress: true,
-      //   hide_modules: true
-      // }),
+      new webpack.LoaderOptionsPlugin({
+        minimize: true,
+        progress: true,
+        modules: true
+      }),
 
-      // new ExtractTextPlugin({
-      //     filename: 'videl.min.css'
-      // }),
+      new ExtractTextPlugin({
+          filename: 'videl.min.css'
+      }),
+    ])
+  }
+  else
+  {
+    config.plugins = config.plugins.concat([
+      new webpack.LoaderOptionsPlugin({
+        minimize: false,
+        progress: true,
+        modules: true
+      }),
+
+      new ExtractTextPlugin({
+          filename: 'videl.css'
+      }),
     ])
   }
 
